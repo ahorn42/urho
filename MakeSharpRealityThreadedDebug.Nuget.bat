@@ -17,7 +17,7 @@ msbuild Bindings\SharpReality\Urho.SharpReality.csproj /p:Configuration=Debug /p
 :: Create NuGet packages
 :: ---------------------------------------------------------------------------------------
 set URHO_NUGET_VER="1.8.91-local-debug-threaded"
-nuget pack Nuget\Urho.SharpReality.nuspec -Version %URHO_NUGET_VER%
+nuget pack Nuget\Urho.SharpReality-Debug.nuspec -Version %URHO_NUGET_VER%
 
 :: Leave the Command Prompt open
 pause
