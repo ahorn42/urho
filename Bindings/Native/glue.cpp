@@ -255,6 +255,26 @@ extern "C" {
 		delete controls;
 	}
 
+//atos
+ 	DllExport RayQueryResult *
+ 	StaticModel_ProcessRayQuery(StaticModel *staticModel, const Urho3D::Ray & ray, const Urho3D::RayQueryLevel & level, float maxDistance, unsigned int flags, unsigned int viewMask)
+	{
+		PODVector<RayQueryResult> results;
+		auto size = sizeof(RayQueryResult);
+		RayOctreeQuery query(results, ray, level, maxDistance, flags, viewMask);
+
+		staticModel->ProcessRayQuery(query, results);
+
+		if (results.Size() == 0)
+			return NULL;
+
+		RayQueryResult * result = new RayQueryResult[results.Size()];
+		for (int i = 0; i < results.Size(); i++) {
+			result[i] = results[i];
+		}
+		return result;
+	}
+
 	DllExport RayQueryResult *
 	Octree_Raycast(Octree *octree, const Urho3D::Ray & ray, const Urho3D::RayQueryLevel & level, float maxDistance, unsigned int flags, unsigned int viewMask, bool single, int *count) {
 		PODVector<RayQueryResult> results;
