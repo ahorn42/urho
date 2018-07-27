@@ -10,7 +10,7 @@ namespace Urho
 			get { return GetMaterial(0); }
 			set { SetMaterial(0, value); }
 		}
-
+/* is this the wrong place?
         [DllImport("mono-holourho", CallingConvention = CallingConvention.Cdecl)]
         internal static extern IntPtr StaticModel_ProcessRayQuery(IntPtr handle, ref Ray ray, ref RayQueryLevel level, float maxDistance, uint drawableFlags, uint viewMask);
 
@@ -31,7 +31,7 @@ namespace Urho
             RayQueryResult item = (RayQueryResult)Marshal.PtrToStructure(data, typeof(RayQueryResult));
 
             return result;
-        }
+        }*/
     }
 
 	partial class AnimatedModel
