@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 :: usage: "MakeSharpReality.bat x64|x86 Release|Debug 2015|2017"
 
 :: x64 or x86
