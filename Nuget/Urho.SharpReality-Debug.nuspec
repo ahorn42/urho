@@ -22,6 +22,6 @@
      <file src="../docs/Urho.XML" target="lib/uap10.0/Urho.XML" />
      <file src="../Bindings/SharpReality/bin/Debug/Urho.dll" target="lib/uap10.0/Urho.dll" />
      <file src="../Bin/SharpReality/Win32/UrhoSharp.SharpReality/mono-holourho.dll" target="native/SharpReality32/mono-holourho.dll" />
-     <file src="../Bin/SharpReality/x64/UrhoSharp.SharpReality/mono-holourho.dll" target="native/SharpReality64/mono-holourho.dll" />
+     <!--<file src="../Bin/SharpReality/x64/UrhoSharp.SharpReality/mono-holourho.dll" target="native/SharpReality64/mono-holourho.dll" />-->
    </files>
 </package>
