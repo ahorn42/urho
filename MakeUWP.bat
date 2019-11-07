@@ -1,5 +1,5 @@
 @echo off
-:: usage: "MakeUWP.bat x64|x86 Release|Debug 2015|2017"
+:: usage: "MakeUWP.bat x64|x86 Release|Debug 2015|2017|2019"
 
 :: x64 or x86
 set "PLATFORM=%~1"
@@ -14,6 +14,7 @@ if "%VSVER%" == "" echo ERROR: VS_VER is not set, example of usage: "MakeUWP.bat
 
 if "%VSVER%" == "2015" set "VS_VER=14"
 if "%VSVER%" == "2017" set "VS_VER=15"
+if "%VSVER%" == "2019" set "VS_VER=16"
 if "%PLATFORM%" == "x64" (set "TARGET=Visual Studio %VS_VER% Win64") else (set "TARGET=Visual Studio %VS_VER%")
 
 del Urho3D\Urho3D_UWP\CMakeCache.txt 2>NUL
